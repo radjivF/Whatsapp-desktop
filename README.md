@@ -1,5 +1,5 @@
-Messenger Native
-================
+Whatapps Desktop Application
+============================
 
 A native chromeless & frameless window wrapper around the new whatsapp
  
