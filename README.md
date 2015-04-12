@@ -13,9 +13,9 @@ Download [WhatsApp Mac ox32](http://inft.ly/Th9XPRn)
 Download [WhatsApp Mac ox64](http://inft.ly/Th9XPRn)
 
 ### Windows
-Download [WhatsApp win ox32](http://inft.ly/Th9XPRn)
+Download [WhatsApp Win ox32](http://inft.ly/Th9XPRn)
 
-Download [WhatsApp win ox64](http://inft.ly/Th9XPRn)
+Download [WhatsApp Win ox64](http://inft.ly/Th9XPRn)
 
 
 ## If you want to build it
@@ -29,7 +29,7 @@ $ npm install && grunt nodewebkit
 
 ##*Disclaimer
 
-WhatsApp is a registered trademark of WhatsApp Inc registered in the U.S. and other countries. This project is an independent work and has not been authorized, sponsored, or otherwise approved by Whatsapp Inc. I just like to do it for fun.
+WhatsApp is a registered trademark of WhatsApp Inc registered in the U.S. and other countries. This is not an official whatsapp product. It's a free and open-source project created by fans of whatsapp. So this project is an independent work and has not been authorized, sponsored, or otherwise approved by Whatsapp Inc. 
 
 ##Licence MIT
 
