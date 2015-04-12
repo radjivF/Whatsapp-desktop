@@ -1,4 +1,4 @@
-Whatapps Desktop Application
+Whatsapp Desktop Application
 ============================
 
 Desktop Application for  windows and mac wrapper around web.whatsApp
