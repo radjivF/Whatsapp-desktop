@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         downloadUrl: 'http://dl.nwjs.io/',
         macIcns: './render/icon.icns',
         mac: function(a){ return {mac: "nwjs-v0.12.0-osx-x64.zip"} },
-        macPlist: {mac_bundle_id: 'messenger.app.com'},
+        macPlist: {mac_bundle_id: 'whatsapp.desktop.app.com'},
         embed_nw: false,
         keep_nw: true,
         platforms: [platform],
