@@ -29,30 +29,16 @@
     win.menu = nativeMenuBar;
 
     window.onload = function() {
+      var win = document.getElementById('wv1');
+      console.log(win);
 
-      document.getElementById('wv1').addEventListener('newwindow', function(e) {
 
-        var urlObj = url.parse(e.targetUrl, true);
-        console.log('loaded');
+      // win.style.display='none';
+      // win.offsetHeight; // no need to store this anywhere, the reference is enough
+      // win.style.display='block';
 
-        if (urlObj.host.indexOf('web.whatsapp') !== -1) {
-          nw.Shell.openExternal(e.targetUrl);
-          return;
-        }
-
-        // If the link is external, whatsapp wraps it in a link to an intermediate
-        // url which asks if you really want to leave.  This just skips that step.
-        var realUrl = urlObj.query.u;
-
-        if (realUrl) {
-          nw.Shell.openExternal(realUrl);
-        }
-      });
     };
 
-    window.load = function(){
-
-    }
   </script>
   </head>
   <body>
