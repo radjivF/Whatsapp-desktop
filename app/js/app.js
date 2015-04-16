@@ -1,46 +1,58 @@
 var url = require('url');
 var nw = require('nw.gui');
+var gui = require('nw.gui');
+var win = gui.Window.get();
 
-var win = nw.Window.get();
-var nativeMenuBar = new nw.Menu({ type: "menubar" });
+
 
 var platform = process.platform;
 platform = /^win/.test(platform) ? 'win32'
          : /^darwin/.test(platform) ? 'osx64'
          : 'linux' + (process.arch == 'ia32' ? '32' : '64');
 
-
 var isOSX = platform === 'osx64';
 var isWindows = platform === 'win32';
 var isLinux = platform.indexOf('linux') === 0;
 
-if (nativeMenuBar.createMacBuiltin) {
-  nativeMenuBar.createMacBuiltin("whatsApp Desktop");
+
+// Create the app menu
+var mainMenu = new gui.Menu({ type: 'menubar' });
+
+if (isLinux) {
+  var fileMenu = new gui.Menu();
+  fileMenu.append(new gui.MenuItem({ label: 'Quit', click: function() { win.close(true); } }));
+
+  mainMenu.append(new gui.MenuItem({ label: 'File', submenu: fileMenu }));
 }
 
-win.menu = nativeMenuBar;
+if (mainMenu.createMacBuiltin) {
+  mainMenu.createMacBuiltin('Messenger');
+}
 
-window.onload = function() {
-  var view = document.getElementById('wv1');
+win.menu = mainMenu;
 
-  //this events are here to repaint the frame :bug from react version used by whatsapp.web
-  win.on('closed', function(view) {
-    console.log('closed');
+// Windows
+if (isWindows) {
+  // Create a tray icon
+  var tray = new gui.Tray({ title: 'Messenger', tooltip: 'Messenger for Desktop', icon: 'icon.png' });
+  tray.on('click', function() {
+    win.show();
   });
-  win.on('loaded', function(view) {
-    console.log('loaded');
-  });
-  win.on('  document-end', function(view) {
-    console.log('document-end');
-  });
-  win.on('loading', function(view){
-    console.log('loading');
-  });
-  win.on('document-start', function(view){
-    console.log('document-start');
-  })
 
-};
+  // Add a menu to the tray
+  var trayMenu = new gui.Menu();
+  trayMenu.append(new gui.MenuItem({ label: 'Open Messenger', click: function() { win.show(); } }));
+  trayMenu.append(new gui.MenuItem({ label: 'Quit Messenger', click: function() { win.close(true); } }));
+  tray.menu = trayMenu;
+}
+
+// OS X
+if (isOSX) {
+  // Re-show the window when the dock icon is pressed
+  gui.App.on('reopen', function() {
+    win.show();
+  });
+}
 
 // Don't quit the app when the window is closed
 win.on('close', function(quit) {
@@ -55,4 +67,3 @@ win.on('close', function(quit) {
     }
   }
 });
-

@@ -5,5 +5,8 @@
     "grunt": "latest",
     "grunt-cli": "latest",
     "grunt-node-webkit-builder": "latest"
+  },
+  "dependencies": {
+    "url": "^0.10.3"
   }
 }
