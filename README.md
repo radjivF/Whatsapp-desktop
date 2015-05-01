@@ -24,7 +24,9 @@ Download [WhatsApp Win ox64](http://inft.ly/Th9XPRn)
 $ npm install && grunt nodewebkit
 ````
 
+##Ios User
 
+Sorry for the Ios user but the application don't support the Iphone User
 
 
 ##*Disclaimer
