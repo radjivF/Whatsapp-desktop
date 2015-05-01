@@ -1,7 +1,7 @@
 Whatsapp Desktop Application
 ============================
 
-Desktop Application for  windows and mac wrapper around web.whatsApp
+Desktop Application for  windows, mac and linux wrapper around web.whatsApp
  
 ![WhatsApp](https://cdn.rawgit.com/radjivC/whatsapp-desktop/master/render/whatsappdesktop.png "WhatsApp Desktop")
 
